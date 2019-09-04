@@ -30,22 +30,18 @@ function ShoeCatalogueFactory() {
 
         const shoeColor = filtered.color;
         const shoeBrand = filtered.brand;
-        const shoeSize = filtered.size
-        
-        if (shoeColor === "") {
-            return checkErrors(true, "Please select color of your shoe!")
-        }
-        if (filtered) {
-            return checkErrors(true, "Please make sure you have a shoe item selected!")
-        }
-        if (shoeSize === undefined) {
-            return checkErrors(true, "Please select the size of your shoe!")
-        }
-        
-        if (shoeBrand === "") {
-            return checkErrors(true, "Please select Brand of the shoe you want!")
-        }
-        
+        const shoeSize = filtered.size;
+
+        if ((Object.keys(filtered)).length === 0) {
+            return checkErrors(true, "Please make sure you have a shoe item selected!");
+        } else if (shoeColor === "") {
+            return checkErrors(true, "Please select color of your shoe!");
+        } else if (shoeSize === 0) {
+            return checkErrors(true, "Please select the size of your shoe!");
+        } else if (shoeBrand === "") {
+            return checkErrors(true, "Please select Brand of the shoe you want!");
+        };
+
 
 
 
