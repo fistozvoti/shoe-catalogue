@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="shoe-catalogue.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <title>Document</title>
 </head>
 
@@ -18,12 +19,28 @@
                 <span class="shopper">sc</span> Shoe Catalogue
             </h1>
 
-            <button class="visibility-cart transition is-open">X</button>
+            <nav>
+                  <ul class="navbar-right">
+                    <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li>
+                  </ul> 
+              </nav>
+              
+              <!-- <div class="container">
+                <div class="shopping-cart">
+                  <div class="shopping-cart-header">
+                    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                    <div class="shopping-cart-total">
+                      <span class="lighter-text">Total:</span>
+                      <span class="main-color-text">R-totalcost</span>
+                    </div>
+                  </div>  -->
+
+            <!-- <button class="visibility-cart transition is-open">X</button> -->
         </div>
 
         <div class="cart transition is-open">
 
-            <div class="row">
+            <span>
                 <select class="selectShoeBrand">
                     <option value="">Select Brand</option>
                     <option value="nike">Nike</option>
@@ -33,8 +50,8 @@
                     <option value="jordan">Jordan</option>
                     <option value="reebok">Reebok</option>
                 </select>
-            </div>
-            <div class="row">
+            </span>
+            <span>
                 <select class="selectShoeColor">
                     <option value="">Select Color</option>
                     <option value="blue">Blue</option>
@@ -43,53 +60,47 @@
                     <option value="yellow">Yellow</option>
                     <option value="orange">Orange</option>
                 </select>
-            </div>
-            <div class="row">
-                <select class="selectShoeSize">
-                    <option value="">Select Size</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-            </div>
+            </span>
 
-            <div class="buttons">
+            <select class="selectShoeSize">
+                <option value="">Select Size</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+
+        <div class="buttons">
             <button class="btn searchBtn">Search</button>
-            <button class="btn addBtn">Add to basket</button>
-            </div>
+        </div>
 
-            <div class="table">
-                <table>
-                        <tr><td>color :</td></tr>
-                        <tr><td>brand :</td></tr>
-                        <tr><td>price :</td></tr>
-                        <tr><td>size :</td></tr>
-                        <tr><td>in_stock :</td></tr>
-                </table>
-                
-            </div>
+        <!-- ***For displaying cards with shoe items*** -->
+        <div class="card">
+            <!-- <p><button>Add to Cart</button></p> -->
+        </div>
 
-            <div class="tf">
-                <div class="row layout-inline">
-                    <div class="col">
-                        <p>Total:</p>
-                    </div>
-                    <div class="showTotalCost">
-                
-                    </div>
-                </div>
+
+        <!-- <div class="tf">
+        <div class="row layout-inline">
+            <div class="col">
+                <p>Total:</p>
+            </div>
+            <div class="showTotalCost">
+
             </div>
         </div>
+    </div> -->
+    </div>
 
     </div>
 </body>
 <script src="./shoes-objects.js"></script>
 <script src="./shoe-catalogue-factory.js"></script>
 <script src="./shoe-catalogue-DOM.js"></script>
+
 </html>
